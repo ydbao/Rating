@@ -1,0 +1,132 @@
+/Users/renjialiang/Downloads/test_1000//001007.jpg
+     difference ： [ 24.]    predict： [ 82.]     xiaobing : 58.0
+/Users/renjialiang/Downloads/test_1000//001034.jpg
+     difference ： [ 22.]    predict： [ 51.]     xiaobing : 73.0
+/Users/renjialiang/Downloads/test_1000//001040.jpg
+     difference ： [ 21.]    predict： [ 54.]     xiaobing : 75.0
+/Users/renjialiang/Downloads/test_1000//001044.jpg
+     difference ： [ 21.]    predict： [ 84.]     xiaobing : 63.0
+/Users/renjialiang/Downloads/test_1000//001085.jpg
+     difference ： [ 24.]    predict： [ 86.]     xiaobing : 62.0
+/Users/renjialiang/Downloads/test_1000//001091.jpg
+     difference ： [ 21.]    predict： [ 67.]     xiaobing : 88.0
+/Users/renjialiang/Downloads/test_1000//001099.jpg
+     difference ： [ 23.]    predict： [ 48.]     xiaobing : 71.0
+/Users/renjialiang/Downloads/test_1000//001122.jpg
+     difference ： [ 23.]    predict： [ 88.]     xiaobing : 65.0
+/Users/renjialiang/Downloads/test_1000//001124.jpg
+     difference ： [ 21.]    predict： [ 74.]     xiaobing : 95.0
+/Users/renjialiang/Downloads/test_1000//001129.jpg
+     difference ： [ 25.]    predict： [ 61.]     xiaobing : 86.0
+/Users/renjialiang/Downloads/test_1000//001139.jpg
+     difference ： [ 22.]    predict： [ 53.]     xiaobing : 75.0
+/Users/renjialiang/Downloads/test_1000//001156.jpg
+     difference ： [ 23.]    predict： [ 86.]     xiaobing : 63.0
+/Users/renjialiang/Downloads/test_1000//001162.jpg
+     difference ： [ 23.]    predict： [ 92.]     xiaobing : 69.0
+/Users/renjialiang/Downloads/test_1000//001176.jpg
+     difference ： [ 20.]    predict： [ 88.]     xiaobing : 68.0
+/Users/renjialiang/Downloads/test_1000//001179.jpg
+     difference ： [ 23.]    predict： [ 58.]     xiaobing : 81.0
+/Users/renjialiang/Downloads/test_1000//001182.jpg
+     difference ： [ 21.]    predict： [ 71.]     xiaobing : 92.0
+/Users/renjialiang/Downloads/test_1000//001197.jpg
+     difference ： [ 21.]    predict： [ 56.]     xiaobing : 77.0
+/Users/renjialiang/Downloads/test_1000//001253.jpg
+     difference ： [ 21.]    predict： [ 69.]     xiaobing : 90.0
+/Users/renjialiang/Downloads/test_1000//001311.jpg
+     difference ： [ 24.]    predict： [ 88.]     xiaobing : 64.0
+/Users/renjialiang/Downloads/test_1000//001316.jpg
+     difference ： [ 24.]    predict： [ 67.]     xiaobing : 91.0
+/Users/renjialiang/Downloads/test_1000//001326.jpg
+     difference ： [ 22.]    predict： [ 88.]     xiaobing : 66.0
+/Users/renjialiang/Downloads/test_1000//001335.jpg
+     difference ： [ 22.]    predict： [ 63.]     xiaobing : 85.0
+/Users/renjialiang/Downloads/test_1000//001338.jpg
+     difference ： [ 23.]    predict： [ 86.]     xiaobing : 63.0
+/Users/renjialiang/Downloads/test_1000//001356.jpg
+     difference ： [ 22.]    predict： [ 82.]     xiaobing : 60.0
+/Users/renjialiang/Downloads/test_1000//001366.jpg
+     difference ： [ 25.]    predict： [ 59.]     xiaobing : 84.0
+/Users/renjialiang/Downloads/test_1000//001368.jpg
+     difference ： [ 21.]    predict： [ 91.]     xiaobing : 70.0
+/Users/renjialiang/Downloads/test_1000//001394.jpg
+     difference ： [ 21.]    predict： [ 69.]     xiaobing : 90.0
+/Users/renjialiang/Downloads/test_1000//001433.jpg
+     difference ： [ 22.]    predict： [ 79.]     xiaobing : 57.0
+/Users/renjialiang/Downloads/test_1000//001439.jpg
+     difference ： [ 25.]    predict： [ 76.]     xiaobing : 51.0
+/Users/renjialiang/Downloads/test_1000//001440.jpg
+     difference ： [ 21.]    predict： [ 58.]     xiaobing : 79.0
+/Users/renjialiang/Downloads/test_1000//001480.jpg
+     difference ： [ 21.]    predict： [ 93.]     xiaobing : 72.0
+/Users/renjialiang/Downloads/test_1000//001485.jpg
+     difference ： [ 21.]    predict： [ 70.]     xiaobing : 49.0
+/Users/renjialiang/Downloads/test_1000//001522.jpg
+     difference ： [ 23.]    predict： [ 69.]     xiaobing : 92.0
+/Users/renjialiang/Downloads/test_1000//001529.jpg
+     difference ： [ 24.]    predict： [ 70.]     xiaobing : 46.0
+/Users/renjialiang/Downloads/test_1000//001550.jpg
+     difference ： [ 20.]    predict： [ 62.]     xiaobing : 82.0
+/Users/renjialiang/Downloads/test_1000//001554.jpg
+     difference ： [ 22.]    predict： [ 48.]     xiaobing : 70.0
+/Users/renjialiang/Downloads/test_1000//001566.jpg
+     difference ： [ 23.]    predict： [ 55.]     xiaobing : 78.0
+/Users/renjialiang/Downloads/test_1000//001614.jpg
+     difference ： [ 22.]    predict： [ 80.]     xiaobing : 58.0
+/Users/renjialiang/Downloads/test_1000//001646.jpg
+     difference ： [ 20.]    predict： [ 89.]     xiaobing : 69.0
+/Users/renjialiang/Downloads/test_1000//001662.jpg
+     difference ： [ 20.]    predict： [ 86.]     xiaobing : 66.0
+/Users/renjialiang/Downloads/test_1000//001665.jpg
+     difference ： [ 20.]    predict： [ 76.]     xiaobing : 96.0
+/Users/renjialiang/Downloads/test_1000//001676.jpg
+     difference ： [ 20.]    predict： [ 86.]     xiaobing : 66.0
+/Users/renjialiang/Downloads/test_1000//001706.jpg
+     difference ： [ 24.]    predict： [ 83.]     xiaobing : 59.0
+/Users/renjialiang/Downloads/test_1000//001718.jpg
+     difference ： [ 25.]    predict： [ 86.]     xiaobing : 61.0
+/Users/renjialiang/Downloads/test_1000//001730.jpg
+     difference ： [ 25.]    predict： [ 95.]     xiaobing : 70.0
+/Users/renjialiang/Downloads/test_1000//001751.jpg
+     difference ： [ 23.]    predict： [ 86.]     xiaobing : 63.0
+/Users/renjialiang/Downloads/test_1000//001761.jpg
+     difference ： [ 20.]    predict： [ 94.]     xiaobing : 74.0
+/Users/renjialiang/Downloads/test_1000//001765.jpg
+     difference ： [ 22.]    predict： [ 53.]     xiaobing : 75.0
+/Users/renjialiang/Downloads/test_1000//001781.jpg
+     difference ： [ 22.]    predict： [ 58.]     xiaobing : 80.0
+/Users/renjialiang/Downloads/test_1000//001809.jpg
+     difference ： [ 25.]    predict： [ 55.]     xiaobing : 80.0
+/Users/renjialiang/Downloads/test_1000//001820.jpg
+     difference ： [ 21.]    predict： [ 96.]     xiaobing : 75.0
+/Users/renjialiang/Downloads/test_1000//001838.jpg
+     difference ： [ 24.]    predict： [ 66.]     xiaobing : 90.0
+/Users/renjialiang/Downloads/test_1000//001853.jpg
+     difference ： [ 20.]    predict： [ 54.]     xiaobing : 74.0
+/Users/renjialiang/Downloads/test_1000//001854.jpg
+     difference ： [ 23.]    predict： [ 63.]     xiaobing : 86.0
+/Users/renjialiang/Downloads/test_1000//001859.jpg
+     difference ： [ 21.]    predict： [ 94.]     xiaobing : 73.0
+/Users/renjialiang/Downloads/test_1000//001880.jpg
+     difference ： [ 21.]    predict： [ 61.]     xiaobing : 82.0
+/Users/renjialiang/Downloads/test_1000//001884.jpg
+     difference ： [ 21.]    predict： [ 61.]     xiaobing : 82.0
+/Users/renjialiang/Downloads/test_1000//001886.jpg
+     difference ： [ 20.]    predict： [ 88.]     xiaobing : 68.0
+/Users/renjialiang/Downloads/test_1000//001906.jpg
+     difference ： [ 21.]    predict： [ 87.]     xiaobing : 66.0
+/Users/renjialiang/Downloads/test_1000//001926.jpg
+     difference ： [ 24.]    predict： [ 82.]     xiaobing : 58.0
+/Users/renjialiang/Downloads/test_1000//001928.jpg
+     difference ： [ 25.]    predict： [ 93.]     xiaobing : 68.0
+/Users/renjialiang/Downloads/test_1000//001933.jpg
+     difference ： [ 23.]    predict： [ 58.]     xiaobing : 81.0
+/Users/renjialiang/Downloads/test_1000//001948.jpg
+     difference ： [ 25.]    predict： [ 67.]     xiaobing : 92.0
+/Users/renjialiang/Downloads/test_1000//001952.jpg
+     difference ： [ 20.]    predict： [ 86.]     xiaobing : 66.0
+/Users/renjialiang/Downloads/test_1000//001978.jpg
+     difference ： [ 24.]    predict： [ 48.]     xiaobing : 72.0
+/Users/renjialiang/Downloads/test_1000//002000.jpg
+     difference ： [ 21.]    predict： [ 63.]     xiaobing : 84.0

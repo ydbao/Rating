@@ -1,6 +1,7 @@
 #coding:UTF-8
 
 from __future__ import print_function
+from  __future__ import division
 from sklearn.externals import joblib
 import argparse
 from poster.streaminghttp import register_openers
@@ -121,7 +122,6 @@ import numpy as np
 
 features_p = getPredictData()
 
-
 pca = joblib.load('pcaModel.model')
 predict_data = pca.transform(features_p)
 regr = joblib.load('trainModel.model')
@@ -132,6 +132,9 @@ size = predict_data.shape
 
 ratings_test = np.loadtxt('new_ratings.txt', delimiter=',')
 
+r_file = open('predict_ratings.txt', "w+")
+
+
 l5 = 0
 l10 = 0
 l15 = 0
@@ -140,11 +143,26 @@ l25 = 0
 l30 = 0
 l40 = 0
 
+n_file = open('imgname.txt', 'r')
+
+nlist = []
+
+for n in n_file:
+    nlist.append(n)
+
+f20 = open('f20~25.txt', 'w+')
+f25 = open('f25~30.txt', 'w+')
+f30 = open('f30+.txt', 'w+')
+
 
 for x in range(0, size[0]):
     list = predict_data[x, :]
     ratings_predict = regr.predict(list)
     m = abs(ratings_predict - ratings_test[x])
+
+    r_file.writelines('difference ： ' + str(m) + '    predict： ' + str(ratings_predict) + '     xiaobing : ' + str(ratings_test[x]) + '\n')
+    r_file.flush()
+
     if m <= 5:
         l5 += 1
     if m <= 10:
@@ -153,14 +171,23 @@ for x in range(0, size[0]):
         l15 += 1
     if m <= 20:
         l20 += 1
-    if m <= 25:
+    if 20 <= m <= 25:
         l25 += 1
-    if m <= 30:
+        f20.writelines(nlist[x] + '     difference ： ' + str(m) + '    predict： ' + str(ratings_predict) + '     xiaobing : ' + str(ratings_test[x])+ '\n')
+        f20.flush()
+    if 25 < m <= 30:
         l30 += 1
+        f25.writelines(nlist[x] + '      difference ： ' + str(m) + '    predict： ' + str(ratings_predict) + '     xiaobing : ' + str(ratings_test[x])+ '\n')
+        f25.flush()
     if m > 30:
         l40 += 1
+        f30.writelines(nlist[x] + '      difference ： ' + str(m) + '    predict： ' + str(ratings_predict) + '     xiaobing : ' + str(ratings_test[x])+ '\n')
+        f30.flush()
 
-
+r_file.close()
+f20.close()
+f25.close()
+f30.close()
 
 size = predict_data.shape[0]
 print(size)
@@ -172,21 +199,26 @@ print(l25)
 print(l30)
 print(l40)
 
-ddlist = []
-
-ddlist.append(l5/size*100)
-ddlist.append(l10/size*100)
-ddlist.append(l15/size*100)
-ddlist.append(l20/size*100)
-ddlist.append(l25/size*100)
-ddlist.append(l30/size*100)
-ddlist.append(l40/size*100)
-
-print(ddlist[0])
-
-truth, = plt.plot(ddlist, 'r')
-plt.legend([truth], ["%"])
-plt.show()
+# ddlist = []
+#
+# ddlist.append(l5/size*100)
+# ddlist.append(l10/size*100)
+# ddlist.append(l15/size*100)
+# ddlist.append(l20/size*100)
+# ddlist.append(l25/size*100)
+# ddlist.append(l30/size*100)
+# ddlist.append(l40/size*100)
+#
+#
+# ax = plt.subplot()
+# truth, = plt.plot(ddlist, 'r')
+#
+# plt.legend([truth], ["%"])
+# ax.set_ylabel('%')
+# ax.set_xticklabels( ('0~5', '5~10', '10~15', '15~20', '20~25', '25~30', '30+') )
+#
+#
+# plt.show()
 
 # predict_data = regr.predict(predict_data)
 #

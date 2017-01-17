@@ -1,5 +1,5 @@
-#coding:UTF-8
-#trainModel
+# coding:UTF-8
+# trainModel
 
 from __future__ import print_function
 from sklearn import svm
@@ -21,7 +21,7 @@ features = getTrainData()
 features_train = features[0:-50]
 features_test = features[-50:]
 
-pca = decomposition.PCA(n_components=24)
+pca = decomposition.PCA(n_components=22)
 pca.fit(features_train)
 joblib.dump(pca, 'pcaModel.model')
 
@@ -33,12 +33,12 @@ ratings_train = ratings[0:-50]
 ratings_test = ratings[-50:]
 
 # regr = neighbors.KNeighborsClassifier(16)
-# regr = svm.SVC(kernel="linear", C=0.025)
+regr = svm.SVC(kernel="linear", C=0.025)
 # regr = svm.SVC(gamma=1, kernel='poly', C=0.1)
 # regr = tree.DecisionTreeClassifier(max_depth=25)  #param
 # regr = ensemble.RandomForestClassifier(max_depth=24, n_estimators=24, max_features=24)  #param
 # regr = naive_bayes.GaussianNB()
-regr = lda.LDA()
+# regr = lda.LDA()
 
 print(features_train.shape)
 
@@ -49,13 +49,13 @@ joblib.dump(regr, 'trainModel.model')
 
 
 
-# ratings_predict = regr.predict(features_test)
-# corr = np.corrcoef(ratings_predict, ratings_test)[0, 1]
-# print 'Correlation:', corr
-#
-# residue = np.mean((ratings_predict - ratings_test) ** 2)
-# print 'Residue:', residue
-#
+ratings_predict = regr.predict(features_test)
+corr = np.corrcoef(ratings_predict, ratings_test)[0, 1]
+print ('Correlation:', corr)
+
+residue = np.mean((ratings_predict - ratings_test) ** 2)
+print ('Residue:', residue)
+
 # truth, = plt.plot(ratings_test, 'r')
 # prediction, = plt.plot(ratings_predict, 'b')
 # plt.legend([truth, prediction], ["Ground Truth", "Prediction"])

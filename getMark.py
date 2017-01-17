@@ -1,14 +1,16 @@
-#coding:UTF-8
-#获取小冰和face++数据
+# coding:UTF-8
+# 获取小冰和face++数据
 
+from __future__ import print_function
 import json
 from poster.encode import multipart_encode
 import argparse
 import os
 from poster.streaminghttp import register_openers
 from post_msxiaobing import rating_apperance
-
+import re
 import urllib2
+
 
 def getFaces(fliename):
     datagen, headers = multipart_encode({"api_key": 'YhpFDB15o3-bl66_latt9xKgs8ecrcbt',
@@ -29,6 +31,7 @@ def getFaces(fliename):
         else:
             count += 1
             r_data = requestsConnect(request)
+
 
 def getFaces2(imgUrl):
     datagen, headers = multipart_encode({"api_key": 'YhpFDB15o3-bl66_latt9xKgs8ecrcbt',
@@ -53,11 +56,11 @@ def getFaces2(imgUrl):
 
 def requestsConnect(request):
     try:
-        resp = urllib2.urlopen(request).read()
-        token = json.loads(resp)["faces"]
+        resp = urllib2.urlopen(request, timeout=10)
+        token = json.loads(resp.read())["faces"]
         return token
     except Exception as e:
-        print e
+        print(e)
         return None
 
 def getData(f):
@@ -131,6 +134,14 @@ def getData(f):
     ssss = ssss + s4 + ", " + "\n"
     return ssss
 
+
+def numerical_sort(value):
+    numbers = re.compile(r"(\d+)")
+    parts = numbers.split(value)
+    parts[1::2] = map(int, parts[1::2])
+    return parts
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--dirPath', type=str, default='../pictures')
@@ -143,50 +154,58 @@ def main():
 
         efile = open('error.txt', 'w+')
         lfile = open('landmarks.txt', 'w+')
-        f = open(args.resultPath,'w+')
+        f = open(args.resultPath, 'w+')
+        imgfile = open('imgname.txt', 'w+')
         i = 1
-        for filenames in os.walk(rootdir):
-            del filenames[2][0]
-            for fn in filenames[2]:
-                print i
-                i+=1
-                thefn = rootdir+"/"+fn
-                print 'face begin'
-                faces = getFaces(thefn)
-                print 'face end'
-                print 'xiaobing begin'
-                mark = rating_apperance(thefn)
-                print 'xiaobing end'
-                if faces is not None and mark is not None:
-                    if len(faces) <= 0:
-                        efile.writelines(thefn + " --- face++ 没有识别到脸"+ "\n")
-                        efile.flush()
+
+        file_names = sorted((fn for fn in os.listdir(rootdir) if fn.endswith("jpg")), key=numerical_sort)
+
+        for thefn in file_names:
+            thefn = rootdir + '/' + thefn
+            print(i)
+            i += 1
+            print('face begin')
+            faces = getFaces(thefn)
+            print('face end')
+            print('xiaobing begin')
+            mark = rating_apperance(thefn)
+            print('xiaobing end')
+            if faces is not None and mark is not None:
+                if len(faces) <= 0:
+                    efile.writelines(thefn + " --- face++ 没有识别到脸" + "\n")
+                    efile.flush()
+                else:
+                    if len(faces) == len(mark):
+                        for face in faces:
+                            sss = getData(face)
+                            lfile.writelines(sss)
+                            lfile.flush()
+                            imgfile.writelines(thefn + '\n')
+                            imgfile.flush()
+                        for point in mark:
+                            point = point[0] + point[2]
+                            f.writelines(point + '\n')
+                            f.flush()
                     else:
-                        if len(faces) == len(mark):
-                            for face in faces:
-                                sss = getData(face)
-                                lfile.writelines(sss)
-                                lfile.flush()
-                            for point in mark:
-                                point = point[0]+point[2]
-                                f.writelines(point + '\n')
-                                f.flush()
-                        else:
-                            efile.writelines(thefn + " --- face++ 和小冰的数据不匹配  face++ : " + str(len(faces)) + "  xiaobing : " +str(len(mark))+ "\n")
-                            efile.flush()
-                elif faces is None and mark is not None:
-                    efile.writelines(thefn + " --- face++ 上传图片失败"+ "\n")
-                    efile.flush()
-                elif faces is not None and mark is None:
-                    efile.writelines(thefn + " --- xiaobing 获取评分失败"+ "\n")
-                    efile.flush()
-                elif faces is None and mark is None:
-                    efile.writelines(thefn + " --- face++ 上传图片失败 and xiaobing 获取评分失败"+ "\n")
-                    efile.flush()
+                        efile.writelines(
+                            thefn + " --- face++ 和小冰的数据不匹配  face++ : " + str(len(faces)) + "  xiaobing : " + str(
+                                len(mark)) + "\n")
+                        efile.flush()
+            elif faces is None and mark is not None:
+                efile.writelines(thefn + " --- face++ 上传图片失败" + "\n")
+                efile.flush()
+            elif faces is not None and mark is None:
+                efile.writelines(thefn + " --- xiaobing 获取评分失败" + "\n")
+                efile.flush()
+            elif faces is None and mark is None:
+                efile.writelines(thefn + " --- face++ 上传图片失败 and xiaobing 获取评分失败" + "\n")
+                efile.flush()
+
         f.close()
         efile.close()
         lfile.close()
+        imgfile.close()
 
 
 if __name__ == '__main__':
-  main()
+    main()

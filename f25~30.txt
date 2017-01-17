@@ -1,0 +1,38 @@
+/Users/renjialiang/Downloads/test_1000//001057.jpg
+      difference ： [ 27.]    predict： [ 78.]     xiaobing : 51.0
+/Users/renjialiang/Downloads/test_1000//001079.jpg
+      difference ： [ 30.]    predict： [ 96.]     xiaobing : 66.0
+/Users/renjialiang/Downloads/test_1000//001111.jpg
+      difference ： [ 28.]    predict： [ 51.]     xiaobing : 79.0
+/Users/renjialiang/Downloads/test_1000//001151.jpg
+      difference ： [ 28.]    predict： [ 96.]     xiaobing : 68.0
+/Users/renjialiang/Downloads/test_1000//001417.jpg
+      difference ： [ 26.]    predict： [ 96.]     xiaobing : 70.0
+/Users/renjialiang/Downloads/test_1000//001446.jpg
+      difference ： [ 26.]    predict： [ 53.]     xiaobing : 79.0
+/Users/renjialiang/Downloads/test_1000//001459.jpg
+      difference ： [ 26.]    predict： [ 68.]     xiaobing : 94.0
+/Users/renjialiang/Downloads/test_1000//001462.jpg
+      difference ： [ 27.]    predict： [ 58.]     xiaobing : 85.0
+/Users/renjialiang/Downloads/test_1000//001512.jpg
+      difference ： [ 28.]    predict： [ 90.]     xiaobing : 62.0
+/Users/renjialiang/Downloads/test_1000//001563.jpg
+      difference ： [ 27.]    predict： [ 67.]     xiaobing : 40.0
+/Users/renjialiang/Downloads/test_1000//001714.jpg
+      difference ： [ 27.]    predict： [ 58.]     xiaobing : 85.0
+/Users/renjialiang/Downloads/test_1000//001737.jpg
+      difference ： [ 27.]    predict： [ 66.]     xiaobing : 93.0
+/Users/renjialiang/Downloads/test_1000//001763.jpg
+      difference ： [ 28.]    predict： [ 67.]     xiaobing : 95.0
+/Users/renjialiang/Downloads/test_1000//001803.jpg
+      difference ： [ 27.]    predict： [ 84.]     xiaobing : 57.0
+/Users/renjialiang/Downloads/test_1000//001816.jpg
+      difference ： [ 26.]    predict： [ 51.]     xiaobing : 77.0
+/Users/renjialiang/Downloads/test_1000//001827.jpg
+      difference ： [ 27.]    predict： [ 53.]     xiaobing : 80.0
+/Users/renjialiang/Downloads/test_1000//001905.jpg
+      difference ： [ 27.]    predict： [ 48.]     xiaobing : 75.0
+/Users/renjialiang/Downloads/test_1000//001918.jpg
+      difference ： [ 27.]    predict： [ 91.]     xiaobing : 64.0
+/Users/renjialiang/Downloads/test_1000//001957.jpg
+      difference ： [ 29.]    predict： [ 61.]     xiaobing : 90.0
